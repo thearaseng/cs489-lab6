@@ -1,0 +1,7 @@
+dentistName,patientId,patientName,patientAddress,appointmentDateTime,surgeryId,surgeryAddress
+Tony Smith,P100,Gillian White,Fairfield,12-Sept-13,1,Iowa City
+Tony Smith,P105,Jill Bell,Burlington,12-Sept-13,2,Fairfield
+Helen Pearson,P108,Ian MacKay,Keokuk,12-Sept-13,3,Burlington
+Helen Pearson,P108,Ian MacKay,Keokuk,14-Sept-13,4,Keokuk
+Robin Plevin,P105,Jill Bell,Burlington,14-Sept-13,2,Fairfield
+Robin Plevin,P110,John Walker,Burlington,15-Sept-13,2,Fairfield
