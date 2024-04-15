@@ -2,10 +2,10 @@ spring:
   application:
     name: lab6
   datasource:
-    url: jdbc:mysql://localhost:3306/dental_database
+    url: jdbc:mysql://localhost:3308/dental_database
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
