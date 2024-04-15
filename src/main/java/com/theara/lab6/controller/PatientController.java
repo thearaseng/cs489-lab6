@@ -85,6 +85,23 @@ public class PatientController {
         return new ResponseEntity<>(existingPatient, HttpStatus.OK);
     }
 
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<String> deletePatient(@PathVariable("id") Integer id) {
+        // Retrieve the patient by id
+        Patient patientToDelete = patientService.findById(id);
+
+        // Delete the patient from the database
+        patientService.delete(patientToDelete);
+
+        return new ResponseEntity<>("Patient deleted successfully", HttpStatus.OK);
+    }
+
+    @GetMapping("/search/{searchString}")
+    public List<Patient> searchPatients(@PathVariable("searchString") String searchString) {
+        // Query patients whose data matches the input searchString
+        return patientService.findByPatientIdContainingIgnoreCaseOrNameContainingIgnoreCaseOrPhoneContainingIgnoreCaseOrEmailContainingIgnoreCase(searchString);
+    }
+
     private List<Patient> iterableToList(Iterable<Patient> iterable) {
         List<Patient> list = new ArrayList<>();
         for (Patient item : iterable) {

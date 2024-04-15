@@ -15,4 +15,7 @@ public class AddressService {
         return addressRepository.save(address);
     }
 
+    public Iterable<Address> findAll() {
+        return addressRepository.findAll();
+    }
 }

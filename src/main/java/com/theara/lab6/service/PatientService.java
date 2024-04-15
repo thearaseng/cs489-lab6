@@ -5,6 +5,8 @@ import com.theara.lab6.repository.PatientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PatientService {
 
@@ -21,6 +23,14 @@ public class PatientService {
 
     public Patient save(Patient patient) {
         return patientRepository.save(patient);
+    }
+
+    public void delete(Patient patient) {
+        patientRepository.delete(patient);
+    }
+
+    public List<Patient> findByPatientIdContainingIgnoreCaseOrNameContainingIgnoreCaseOrPhoneContainingIgnoreCaseOrEmailContainingIgnoreCase(String searchString) {
+        return patientRepository.findByPatientIdContainingIgnoreCaseOrNameContainingIgnoreCaseOrPhoneContainingIgnoreCaseOrEmailContainingIgnoreCase(searchString, searchString, searchString, searchString);
     }
 
 }
