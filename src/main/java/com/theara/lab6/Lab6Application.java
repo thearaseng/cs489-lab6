@@ -24,6 +24,8 @@ public class Lab6Application implements CommandLineRunner {
     private PatientRepository patientRepository;
     @Autowired
     private SurgeryRepository surgeryRepository;
+    @Autowired
+    private SampleDataLoader sampleDataLoader;
 
     public static void main(String[] args) {
         SpringApplication.run(Lab6Application.class, args);
@@ -142,6 +144,7 @@ public class Lab6Application implements CommandLineRunner {
         createAppointment(robinPlevin, jillBell, burlingtonSurgery, "14-Sep-13");
         createAppointment(robinPlevin, johnWalker, burlingtonSurgery, "15-Sep-13");
 
+        sampleDataLoader.run();
     }
 
     private void createAppointment(Dentist dentist, Patient patient, Surgery surgery, String date) {

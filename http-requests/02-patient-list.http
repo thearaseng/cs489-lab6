@@ -1,0 +1,7 @@
+# curl --location 'http://localhost:8080/adsweb/api/v1/patient/list'
+#--header 'Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ1c2VyMSIsImlhdCI6MTcxMzI4NzM1OSwiZXhwIjoxNzEzMzczNzU5fQ.7Yi5NXP7eL-8v9M42JBrHbr826KS8yTCodTm0lO3Y_8eGBhJrNH1p22j22wBkUO3'
+GET http://localhost:8080/adsweb/api/v1/patient/list
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ1c2VyMSIsImlhdCI6MTcxMzI4NzM1OSwiZXhwIjoxNzEzMzczNzU5fQ.7Yi5NXP7eL-8v9M42JBrHbr826KS8yTCodTm0lO3Y_8eGBhJrNH1p22j22wBkUO3
+
+###
+

@@ -1,0 +1,16 @@
+# curl --location 'http://localhost:8080/adsweb/api/v1/public/auth/login'
+#--header 'Content-Type: application/json'
+#--data '{
+#    "username": "user1",
+#    "password": "123"
+#}'
+POST http://localhost:8080/adsweb/api/v1/public/auth/login
+Content-Type: application/json
+
+{
+  "username": "user1",
+  "password": "123"
+}
+
+###
+
