@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:latest
+    container_name: dental_database
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: dental_database
+
+  api:
+    image: dental-webapi
+    container_name: dental-webapi
+    environment:
+      DATASOURCE_URL: jdbc:mysql://db:3306/dental_database
