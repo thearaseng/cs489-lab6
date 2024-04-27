@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  db:
+  dental-db:
     image: mysql:latest
     container_name: dental_database
     environment:
@@ -12,4 +12,8 @@ services:
     image: dental-webapi
     container_name: dental-webapi
     environment:
-      DATASOURCE_URL: jdbc:mysql://db:3306/dental_database
+      DATASOURCE_URL: jdbc:mysql://dental-db:3306/dental_database
+      DATASOURCE_USERNAME: root
+      DATASOURCE_PASSWORD: root
+    ports:
+      - "8086:80"

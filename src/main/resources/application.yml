@@ -2,8 +2,8 @@ spring:
   application:
     name: lab6
   datasource:
-    url: ${DATASOURCE_URL:jdbc:mysql://localhost:3308/dental_database}
-    username: root
+    url: ${DATASOURCE_URL}
+    username: ${DATASOURCE_USERNAME}
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:

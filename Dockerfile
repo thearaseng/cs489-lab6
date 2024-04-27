@@ -16,6 +16,6 @@ WORKDIR /app
 
 COPY --from=build /app/target/*.jar app.jar
 
-EXPOSE 8084
+EXPOSE 80
 
 CMD ["java", "-Dspring.profiles.active=prod", "-jar", "app.jar"]
